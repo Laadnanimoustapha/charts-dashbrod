@@ -1,5 +1,4 @@
 import React from 'react';
-import { Bar, Line, PolarArea } from 'react-chartjs-2';
 import { months, colors, borderColors, commonOptions } from '../../utils/chartConfig';
 
 const AdvancedCharts = () => {
@@ -129,5 +128,6 @@ const AdvancedCharts = () => {
     </div>
   );
 };
+
 
 export default AdvancedCharts;
