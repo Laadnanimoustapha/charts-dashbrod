@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clean UI Variables */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-accent: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Global Styles */
+body {
+  background: var(--bg-primary);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Clean Header Styles */
+.app-header {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  animation: fadeIn 0.6s ease-out;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.app-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.app-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Clean Section Styles */
+.section-title {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  animation: slideUp 0.5s ease-out;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title h2 {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+  letter-spacing: -0.025em;
+}
+
+/* Clean Chart Container */
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .chart-container {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chart-container {
+    height: 400px;
+  }
+}
+
+/* Clean Chart Card Styles */
+.chart-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  animation: fadeIn 0.5s ease-out;
+  position: relative;
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+.chart-card h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.chart-card p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Alternative Chart Card Styles */
+.chart-card-alt {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  animation: fadeIn 0.5s ease-out;
+  position: relative;
+}
+
+.chart-card-alt:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-medium);
+}
+
+.chart-card-alt h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.chart-card-alt p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Clean Button Styles */
+.update-btn {
+  position: relative;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  font-weight: 500;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.update-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.update-btn:active {
+  transform: translateY(0);
+}
+
+/* Clean Word Cloud Styles */
+.word-cloud {
+  background: var(--bg-accent);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 200px;
+}
+
+.word-cloud span {
+  transition: all 0.2s ease;
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.word-cloud span:hover {
+  transform: scale(1.1);
+  background: var(--accent-blue);
+  color: white;
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Clean Footer Styles */
+.app-footer {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.app-footer p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+/* Grid Animations */
+.chart-grid > * {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.chart-grid > *:nth-child(1) { animation-delay: 0.05s; }
+.chart-grid > *:nth-child(2) { animation-delay: 0.1s; }
+.chart-grid > *:nth-child(3) { animation-delay: 0.15s; }
+.chart-grid > *:nth-child(4) { animation-delay: 0.2s; }
+.chart-grid > *:nth-child(5) { animation-delay: 0.25s; }
+.chart-grid > *:nth-child(6) { animation-delay: 0.3s; }
+.chart-grid > *:nth-child(7) { animation-delay: 0.35s; }
+.chart-grid > *:nth-child(8) { animation-delay: 0.4s; }
+.chart-grid > *:nth-child(9) { animation-delay: 0.45s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .app-subtitle {
+    font-size: 1rem;
+  }
+  
+  .chart-card, .chart-card-alt {
+    padding: 1rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.25rem;
+  }
+  
+  .app-header {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Clean Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-accent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
